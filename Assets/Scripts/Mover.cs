@@ -14,15 +14,17 @@ public class Mover : MonoBehaviour {
         rigidBody.velocity = new Vector2(Speed, 0);
      
         // Max alpha is 255 
-        this.GetComponent<Renderer>().material.color = new Color(0, 0, 0, 50);
+        this.GetComponent<SpriteRenderer>().color =  new Color(0f, 0f, 0f, 0.05f);
     }
 
-    private void UpdateVisability()
+
+
+    public void UpdateVisability()
     {
         //When ship sonar is on this object
-        var color = this.GetComponent<Renderer>().material.color.a;
-        color++;
-        this.GetComponent<Renderer>().material.color = new Color(0,0,0, color);
+        var color = this.GetComponent<SpriteRenderer>().color;
+        color.a += 0.005f;
+        this.GetComponent<SpriteRenderer>().color = color;
     }
 
 }
