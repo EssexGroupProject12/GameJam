@@ -8,6 +8,9 @@ public class GameController : MonoBehaviour
     public int Score;
     public Text ScoreText;
 
+    public GameObject[] Collectables = new GameObject[2];
+    public GameObject Chosen;
+
     private void Start()
     {
         
@@ -16,5 +19,11 @@ public class GameController : MonoBehaviour
     private void Update()
     {
         ScoreText.text = string.Format("Score: {0}", Score);
+    }
+
+    private IEnumerator Spawn()
+    {
+            yield return new WaitForSeconds(2);
+            Chosen = Collectables[Random.Range(0, Collectables.Length)];
     }
 }
