@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour
             {
                 var fakeObject = Collectables[Random.Range(0, Collectables.Length)];
                 var fakeInstance = Instantiate(fakeObject, pos, Quaternion.identity);
+                fakeInstance.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 if (i == 0) encapsulatedObject.fakeObject1 = fakeInstance;
                 else encapsulatedObject.fakeObject2 = fakeInstance;
             }
