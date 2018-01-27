@@ -195,8 +195,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1121625035}
-  - {fileID: 604890617}
   - {fileID: 1075517275}
   - {fileID: 1330932595}
   m_Father: {fileID: 0}
@@ -292,16 +290,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604890616}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 83939472}
+  m_Father: {fileID: 1330932595}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 194}
+  m_AnchoredPosition: {x: 0, y: 408}
   m_SizeDelta: {x: 728, y: 41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &604890618
@@ -371,11 +369,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330932595}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000005722, y: 169}
+  m_AnchoredPosition: {x: 0.000005722, y: 117}
   m_SizeDelta: {x: 254.2, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &643012737
@@ -445,11 +443,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330932595}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: -40}
+  m_AnchoredPosition: {x: -0.000030517, y: -94}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &927555407
@@ -522,7 +520,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 83939472}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -643,16 +641,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121625034}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 83939472}
+  m_Father: {fileID: 1330932595}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 278}
+  m_AnchoredPosition: {x: 17, y: 464.35}
   m_SizeDelta: {x: 902.8, y: 181}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1121625036
@@ -722,11 +720,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330932595}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: 388.85}
+  m_AnchoredPosition: {x: -0.000030517, y: 325}
   m_SizeDelta: {x: 237.9, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220880258
@@ -796,11 +794,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330932595}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000057216, y: -368}
+  m_AnchoredPosition: {x: -0.0000057216, y: -418.85}
   m_SizeDelta: {x: 185.2, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253848178
@@ -872,18 +870,20 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1121625035}
+  - {fileID: 604890617}
   - {fileID: 1220880257}
   - {fileID: 643012736}
   - {fileID: 927555406}
   - {fileID: 1253848177}
   - {fileID: 1793438526}
   m_Father: {fileID: 83939472}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: -761}
-  m_SizeDelta: {x: 902.8, y: 807.7}
+  m_AnchoredPosition: {x: 4, y: -752.7}
+  m_SizeDelta: {x: 902.8, y: 1024.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1330932596
 MonoBehaviour:
@@ -917,9 +917,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: "\n\nMBANEFO, TERRY \n\nMUNRO, JOSEPH WILLIAM FRANK\n\nOPLATEK, TOMAS\n\nREN,
-    YIFAN\n\nSHEAD, DANIEL\n\n\n\nMARIO SERIES - LEVEL UP COINS & TIME CUTTER\n\nMINE
-    SWEEPER- Mines\n\nWallpaper-and-background.net- background images\n\nFLATICON.COM-
+  m_Text: "\n\n\n\n\n\n\n\n\n\n\nMBANEFO, TERRY \n\nMUNRO, JOSEPH WILLIAM FRANK\n\nOPLATEK,
+    TOMAS\n\nREN, YIFAN\n\nSHEAD, DANIEL\n\n\n\nMARIO SERIES - LEVEL UP COINS & TIME
+    CUTTER\n\nMINE SWEEPER- Mines\n\nWallpaper-and-background.net- background images\n\nFLATICON.COM-
     SUBMARINE\n\nGOOGLE IMAGES- SHARK\n\n\n\nhttps://soundcloud.com/bertazi/super-mario-bros-vs-caetano?in=joao-fernando-27618486/sets/8-bit-remix\r\n\r\nhttps://soundcloud.com/pip-pap/death-note-opening-1-the-world-8-bit-nes-remix-and-16-bit-snes-remix?in=joao-fernando-27618486/sets/8-bit-remix\r\n\r\nhttps://soundcloud.com\r\n\r\nhttps://soundcloud.com/lumena-tan/undertale-ghost-fight-8-bit-vrc6\r\n\r\nhttps://www.zapsplat.com/page/1/?s=8-bit\r\n\r\nhttps://www.zapsplat.com/?s=submarine\r\n\n\n\n
     michael fairbank\n\n\n\n\n"
 --- !u!222 &1330932597
@@ -1113,7 +1113,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330932595}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
