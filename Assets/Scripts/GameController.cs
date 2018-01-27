@@ -1,30 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public int Score;
+    public Text ScoreText;
 
-
-    public GameObject[] Collectables = new GameObject[2];
-    public GameObject Chosen;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-
-    private IEnumerator Spawn()
+    private void Start()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(2);
-            Chosen = Collectables[Random.Range(0, Collectables.Length)];
-        }
+        
+    }
+
+    private void Update()
+    {
+        ScoreText.text = string.Format("Score: {0}", Score);
     }
 }
