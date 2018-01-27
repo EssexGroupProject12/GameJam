@@ -25,12 +25,11 @@ public class SonarController : MonoBehaviour
 
 	void OnTriggerStay2D(Collider2D coll)
 	{
-	    if (coll.gameObject.tag != "Sonar")
+	    if (coll.gameObject.tag == "EncapsulatedObject")
 	    {
-	        if (coll.gameObject.activeSelf)
-	        {
-                coll.GetComponent<Mover>().UpdateVisability();
-            }
+	        
+                coll.GetComponent<EncapsulatedObject>().UpdateVisability();
+            
             
 	        
 	    }
@@ -39,8 +38,8 @@ public class SonarController : MonoBehaviour
 
 	void UpdatePos()
 	{
-		offset = this.transform.localScale.y/2 + PlayerGameObject.GetComponent<Renderer>().bounds.size.x / 2 + 0.1f;
-		SonarPos = new Vector2(PlayerGameObject.transform.position.x + offset, PlayerGameObject.transform.position.y);
+		offset = this.transform.localScale.y/2 + PlayerGameObject.GetComponent<Renderer>().bounds.size.x / 2;
+		SonarPos = new Vector2(PlayerGameObject.transform.position.x + offset, PlayerGameObject.transform.position.y-0.4f);
 		this.transform.position = SonarPos;
 	}
 
