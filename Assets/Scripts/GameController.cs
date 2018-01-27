@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
     {
         while (true)
         {
-            Chosen = Collectables[0];//[Random.Range(0, Collectables.Length)];
+            Chosen = Collectables[Random.Range(0, Collectables.Length)];
             Instantiate(Chosen, new Vector3(8, Random.Range(-3, 3), 0), Quaternion.identity);
             yield return new WaitForSeconds(2);
         }

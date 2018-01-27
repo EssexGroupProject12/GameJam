@@ -14,7 +14,7 @@ public class Mover : MonoBehaviour {
         rigidBody.velocity = new Vector2(Speed, 0);
      
         // Max alpha is 255 
-        this.GetComponent<SpriteRenderer>().color =  new Color(0f, 0f, 0f, 0.05f);
+        this.GetComponent<SpriteRenderer>().color =  new Color(255f, 255f, 255f, 0.05f);
     }
 
 
