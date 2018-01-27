@@ -16,6 +16,7 @@ TagManager:
   - TimeCutter
   - boundary
   - Sonar
+  - EncapsulatedObject
   layers:
   - Default
   - TransparentFX
