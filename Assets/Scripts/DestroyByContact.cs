@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyByContact : MonoBehaviour
 {
-    public GameController GameController;
+    private GameController GameController;
     private GameObject sonar;
 
     private void Start()
