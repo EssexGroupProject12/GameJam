@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 50259100063608414}
   - component: {fileID: 114637335712984486}
   - component: {fileID: 114766122201173790}
+  - component: {fileID: 61131864945048694}
   m_Layer: 0
-  m_Name: MovingObjectTest
-  m_TagString: Untagged
+  m_Name: Shoe
+  m_TagString: Shoe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055427832856214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.73, y: 0.52, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,6 +64,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61131864945048694
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055427832856214}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!114 &114637335712984486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650413461c500c94b8b21bba07637ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameController: {fileID: 0}
 --- !u!212 &212774883788753838
 SpriteRenderer:
   m_ObjectHideFlags: 1

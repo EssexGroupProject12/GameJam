@@ -4,7 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - boundary
+  - Chest
+  - Coin
+  - RareItem
+  - SonarBuff
+  - UniqueItem
+  - MineDamage
+  - MineEMP
+  - Monster
+  - Shoe
+  - TimeCutter
   layers:
   - Default
   - TransparentFX
