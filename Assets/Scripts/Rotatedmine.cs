@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rotatedmine : MonoBehaviour {
 
-	int speed=5;
+	//int speed=5;
 
 	// Use this for initialization
 	void Start () {	
