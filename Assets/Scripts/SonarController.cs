@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SonarController : MonoBehaviour
 {
-
+    
 
 	public GameObject PlayerGameObject;
 	private float offset;
@@ -16,17 +16,24 @@ public class SonarController : MonoBehaviour
 		UpdatePos();
 
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update () {
 		UpdatePos();
 	}
 
-	void OnTriggerEnter2D(Collider2D coll)
+	void OnTriggerStay2D(Collider2D coll)
 	{
-		//this.GetComponent<SpriteRenderer>().color = Color.blue;
-	    coll.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+	    if (coll.gameObject.tag != "Sonar")
+	    {
+	        if (coll.gameObject.activeSelf)
+	        {
+                coll.GetComponent<Mover>().UpdateVisability();
+            }
+            
+	        
+	    }
 	}
 
 
@@ -37,10 +44,6 @@ public class SonarController : MonoBehaviour
 		this.transform.position = SonarPos;
 	}
 
-	void SonarEffect()
-	{
 
-		
-	}
-
+    
 }
