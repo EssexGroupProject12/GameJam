@@ -11,18 +11,17 @@ public class GameController : MonoBehaviour
 
     public GameObject[] Collectables;
     public GameObject EncapsulatedObject;
-    //public Vector3 pos;
+    public PlayerController PlayerController { get; private set; }
 
     private void Start()
     {
         StartCoroutine(Spawn());
-
+        PlayerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     private void Update()
     {
         ScoreText.text = string.Format("Score: {0}", Score);
-        
     }
 
 
@@ -39,6 +38,7 @@ public class GameController : MonoBehaviour
             {
                 var fakeObject = Collectables[Random.Range(0, Collectables.Length)];
                 var fakeInstance = Instantiate(fakeObject, pos, Quaternion.identity);
+                fakeInstance.gameObject.GetComponent<EdgeCollider2D>().enabled = false;
                 if (i == 0) encapsulatedObject.fakeObject1 = fakeInstance;
                 else encapsulatedObject.fakeObject2 = fakeInstance;
             }

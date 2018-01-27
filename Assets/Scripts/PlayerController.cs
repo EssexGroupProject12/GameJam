@@ -13,8 +13,11 @@ public class PlayerController : MonoBehaviour
     private float YMax;
     private Rigidbody2D Rigidbody;
 
+    private float OriginalSpeed;
+
     private void Start()
     {
+        OriginalSpeed = Speed;
         Rigidbody = GetComponent<Rigidbody2D>();
         var distance = transform.position.z - Camera.main.transform.position.z;
         var leftmost = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, distance));
@@ -34,5 +37,16 @@ public class PlayerController : MonoBehaviour
         Rigidbody.velocity = speedVector;
 
         transform.position = new Vector3(Mathf.Clamp(Rigidbody.position.x, XMin, XMax), Mathf.Clamp(Rigidbody.position.y, YMin, YMax), 0);
+    }
+
+    public void ChangeSpeedTemporarily()
+    {
+        Speed = OriginalSpeed - 2;
+        Invoke("ResetSpeed", 3f);
+    }
+
+    private void ResetSpeed()
+    {
+        Speed = OriginalSpeed;
     }
 }

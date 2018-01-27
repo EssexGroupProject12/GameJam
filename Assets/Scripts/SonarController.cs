@@ -9,9 +9,11 @@ public class SonarController : MonoBehaviour
 	public GameObject PlayerGameObject;
 	private float offset;
 	private Vector2 SonarPos;
+    private Vector3 currentScale;
+    private float powerModifier;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
 	{
 		UpdatePos();
 
@@ -44,5 +46,25 @@ public class SonarController : MonoBehaviour
 	}
 
 
-    
+    public void SonarPowers(bool powerUpDown) // true means up
+    {
+        currentScale = this.transform.localScale;
+        if (powerUpDown)
+        {
+            powerModifier = 1.25f;
+        }
+        else
+        {
+            powerModifier = 0.8f;
+        }
+
+        this.transform.localScale = new Vector3(this.transform.localScale.x * powerModifier, this.transform.localScale.y * powerModifier, this.transform.localScale.z);
+        Invoke("ResetSonarPowers", 3f);
+    }
+
+
+    public void ResetSonarPowers()
+    {
+        this.transform.localScale = currentScale;
+    }
 }
