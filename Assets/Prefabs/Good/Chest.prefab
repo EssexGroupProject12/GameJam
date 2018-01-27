@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 61521543152199300}
   - component: {fileID: 68493591558337950}
   - component: {fileID: 114540136809196204}
+  - component: {fileID: 95983389251632004}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Chest
@@ -210,6 +211,23 @@ EdgeCollider2D:
   - {x: -15.99964, y: -3.0022142}
   - {x: -16.988007, y: -2.9987009}
   - {x: -16.9937, y: -0.99208575}
+--- !u!95 &95983389251632004
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055427832856214}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a24b93958de49344f9cdb2d8b0f7376c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114540136809196204
 MonoBehaviour:
   m_ObjectHideFlags: 1

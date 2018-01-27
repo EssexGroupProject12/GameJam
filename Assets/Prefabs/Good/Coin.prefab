@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 61794774625433630}
   - component: {fileID: 68672543420667354}
   - component: {fileID: 114519940994093582}
+  - component: {fileID: 95011273988549920}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -130,6 +131,23 @@ EdgeCollider2D:
   - {x: 0.6174066, y: -0.9064706}
   - {x: 0.28903952, y: -0.9809458}
   - {x: -0.035654, y: -1.0022159}
+--- !u!95 &95011273988549920
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055427832856214}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aff757a58f9996f48ad88392f46a51b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114519940994093582
 MonoBehaviour:
   m_ObjectHideFlags: 1
