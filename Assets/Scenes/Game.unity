@@ -4134,7 +4134,7 @@ MonoBehaviour:
   Collectables:
   - {fileID: 1055427832856214, guid: 81a1e5bbdf4bc79458549628279303f1, type: 2}
   - {fileID: 1055427832856214, guid: 2e701c590254e8c43a24dfe516c5382b, type: 2}
-  - {fileID: 1055427832856214, guid: 9d3628fc3acaa4449a57ffd1faaad0b9, type: 2}
+  - {fileID: 1753967062491440, guid: 6ef6b2c6a95d26644849882c680fec62, type: 2}
   - {fileID: 1055427832856214, guid: e8872dab95a3e7e4786576e87acc8c45, type: 2}
   - {fileID: 1055427832856214, guid: c31fd7012e6be9047a965a60c7769fa2, type: 2}
   - {fileID: 1407955671700104, guid: 6c0942e2112081640bf719f1cd12f4a9, type: 2}
