@@ -13,7 +13,11 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        
+        masadhfsaldfghkjsagdlsagdlfsahfhsa
+            sadfa;
+        sjhdfhsadl;
+        fsa
+            dfsialohdfil;
     }
 
     private void Update()
