@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         XMin = leftmost.x + Padding;
         XMax = rightmost.x - Padding;
         YMin = leftmost.y + Padding;
-        YMax = topmost.y + Padding;
+        YMax = topmost.y - Padding;
     }
 
     private void Update()
