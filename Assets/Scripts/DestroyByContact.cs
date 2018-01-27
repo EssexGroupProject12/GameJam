@@ -13,12 +13,15 @@ public class DestroyByContact : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        switch (gameObject.tag)
-        {
-            case "Coin":
-                GameController.Score += 5;
-                break;
+        if (collision.gameObject.tag == "Player")
+        { 
+            switch (gameObject.tag)
+            {
+                case "Coin":
+                    GameController.Score += 5;
+                    break;
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }
