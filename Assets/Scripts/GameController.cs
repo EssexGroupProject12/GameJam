@@ -8,23 +8,29 @@ public class GameController : MonoBehaviour
     public int Score;
     public Text ScoreText;
 
-    public GameObject[] Collectables = new GameObject[2];
+    public GameObject[] Collectables;
     public GameObject Chosen;
 
     private void Start()
     {
-        var test = new GameObject();
-        var object2 = new GameObject();
+        StartCoroutine(Spawn());
+
     }
 
     private void Update()
     {
         ScoreText.text = string.Format("Score: {0}", Score);
+        
     }
 
     private IEnumerator Spawn()
     {
+        while (true)
+        {
+            Chosen = Collectables[0];//[Random.Range(0, Collectables.Length)];
+            Instantiate(Chosen, new Vector3(8, Random.Range(-3, 3), 0), Quaternion.identity);
             yield return new WaitForSeconds(2);
-            Chosen = Collectables[Random.Range(0, Collectables.Length)];
+        }
+        
     }
 }
