@@ -25,6 +25,9 @@ public class DestroyByContact : MonoBehaviour
                 case "Chest": //treasure chest
                     GameController.Score += 10;
                     break;
+                case "MineEMP":
+                    GameController.PlayerController.ChangeSpeedTemporarily();
+                    break;
                 case "Shoe": //shoe
                     GameController.Score += 1;
                     break;
