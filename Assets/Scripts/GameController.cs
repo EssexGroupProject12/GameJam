@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        
+        var test = new GameObject();
     }
 
     private void Update()
