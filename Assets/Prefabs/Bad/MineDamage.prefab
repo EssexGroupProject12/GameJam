@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114873783389928062}
   - component: {fileID: 61992515924592356}
   - component: {fileID: 114842452486454260}
+  - component: {fileID: 114558372864902238}
   m_Layer: 0
   m_Name: MineDamage
   m_TagString: MineDamage
@@ -90,6 +91,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &114558372864902238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1407955671700104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f14590ea10265d43b3fa76711de1289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114757693238015420
 MonoBehaviour:
   m_ObjectHideFlags: 1
