@@ -7,6 +7,8 @@ using UnityEngine;
 public class Mover : MonoBehaviour {
 
     public float Speed;
+    public float r, g, b;
+
 
     private void Start()
     {
@@ -14,7 +16,11 @@ public class Mover : MonoBehaviour {
         rigidBody.velocity = new Vector2(Speed, 0);
      
         // Max alpha is 255 
-        this.GetComponent<Renderer>().material.color = new Color(0, 0, 0, 50);
+        r = this.GetComponent<Renderer>().material.color.r;
+        g = this.GetComponent<Renderer>().material.color.g;
+        b = this.GetComponent<Renderer>().material.color.b;
+
+        this.GetComponent<Renderer>().material.color = new Color(r, g, b);
     }
 
     private void UpdateVisability()
@@ -22,7 +28,7 @@ public class Mover : MonoBehaviour {
         //When ship sonar is on this object
         var color = this.GetComponent<Renderer>().material.color.a;
         color++;
-        this.GetComponent<Renderer>().material.color = new Color(0,0,0, color);
+        this.GetComponent<Renderer>().material.color = new Color(r,g,b, color);
     }
 
 }
