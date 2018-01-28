@@ -8,10 +8,12 @@ public class Timer : MonoBehaviour
 {
     public Text timetext;
     public int countdown;
+    private GameController gameController;
     // Use this for initialization
     void Start()
     {
         StartCoroutine(Counter());
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,8 @@ public class Timer : MonoBehaviour
             Debug.Log(countdown--);
             yield return new WaitForSeconds(1);
         }
-        SceneManager.LoadScene(5);
+
+        PlayerSettings.LastScore = gameController.Score;
+        SceneManager.LoadScene("Lose");
     }
 }

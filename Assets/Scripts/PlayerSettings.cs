@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerSettings : MonoBehaviour
 {
+    public static int LastScore = 0;
     private static string MusicKey = "IsMusicOn";
     private static string SoundKey = "IsSoundOn";
     private static string DifficultyKey = "IsHardDifficulty";
     private static string Level1TimeKey = "Level1Time";
     private static string Level2TimeKey = "Level2Time";
+    private static string SoundLevelKey = "SoundLevel";
 
     public static float Level1Time
     {
@@ -92,6 +94,24 @@ public class PlayerSettings : MonoBehaviour
         {
             PlayerPrefs.SetInt(SoundKey, value ? 1 : 0);
             MusicPlayer.instance.ToggleMuteSound(!value);
+        }
+    }
+
+    public static float SoundLevel
+    {
+        get
+        {
+            if (!PlayerPrefs.HasKey(SoundLevelKey))
+            {
+                PlayerPrefs.SetFloat(SoundLevelKey, 0.5f);
+            }
+            var currentValue = PlayerPrefs.GetFloat(SoundLevelKey);
+            return currentValue;
+        }
+        set
+        {
+            PlayerPrefs.SetFloat(SoundLevelKey, value);
+            MusicPlayer.instance.SetVolume(value);
         }
     }
 }
