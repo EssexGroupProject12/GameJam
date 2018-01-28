@@ -9,14 +9,14 @@ public class SonarController : MonoBehaviour
 	public GameObject PlayerGameObject;
 	private float offset;
 	private Vector2 SonarPos;
-    private Vector3 currentScale;
-    private float powerModifier;
+    private float[] powerModifier = new float[2];
 
     // Use this for initialization
     void Start ()
 	{
 		UpdatePos();
-
+        powerModifier[0] = 1.25f;
+        powerModifier[1] = 0.8f;
 
     }
 
@@ -48,23 +48,23 @@ public class SonarController : MonoBehaviour
 
     public void SonarPowers(bool powerUpDown) // true means up
     {
-        currentScale = this.transform.localScale;
-        if (powerUpDown)
-        {
-            powerModifier = 1.25f;
-        }
-        else
-        {
-            powerModifier = 0.8f;
-        }
+        
+        float powerMult;
+        powerMult = powerUpDown ? powerModifier[0] : powerModifier[1];
 
-        this.transform.localScale = new Vector3(this.transform.localScale.x * powerModifier, this.transform.localScale.y * powerModifier, this.transform.localScale.z);
-        Invoke("ResetSonarPowers", 3f);
+        this.transform.localScale = new Vector3(this.transform.localScale.x * powerMult, this.transform.localScale.y * powerMult, this.transform.localScale.z);
+        if (powerUpDown) Invoke("DownSonarPowers", 5f);
+        else Invoke("UpSonarPowers", 5f); ;
+        
     }
 
 
-    public void ResetSonarPowers()
+    public void DownSonarPowers()
     {
-        this.transform.localScale = currentScale;
+        this.transform.localScale = new Vector3(this.transform.localScale.x / powerModifier[0], this.transform.localScale.y / powerModifier[0], this.transform.localScale.z);
+    }
+    public void UpSonarPowers()
+    {
+        this.transform.localScale = new Vector3(this.transform.localScale.x / powerModifier[1], this.transform.localScale.y / powerModifier[1], this.transform.localScale.z);
     }
 }
