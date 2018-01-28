@@ -12,21 +12,15 @@ public class VolumeControl : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        volume = 50.0f;
-    }
-    void Start()
-    {
-      
+        slides.value = PlayerSettings.SoundLevel;
+        volume = PlayerSettings.SoundLevel;
+        //volume = 50.0f;
     }
 
-    // Update is called once per frame
     void OnGUI()
     {
-
         volume = slides.value;
-
-        MusicPlayer.instance.SetVolume(volume);
-        //audioObject.GetComponent<AudioSource>().volume = volume;
+        PlayerSettings.SoundLevel = volume;
     }
     void Update()
     {
