@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerSettings : MonoBehaviour
 {
+    public static int LastScore = 0;
     private static string MusicKey = "IsMusicOn";
     private static string SoundKey = "IsSoundOn";
     private static string DifficultyKey = "IsHardDifficulty";
