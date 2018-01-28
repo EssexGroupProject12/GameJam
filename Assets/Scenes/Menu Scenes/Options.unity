@@ -369,7 +369,7 @@ Prefab:
     - target: {fileID: 224797974263558888, guid: 070a81bf1bbc5aa4aa26e4b514c4bba9,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -186.6
+      value: 24.67
       objectReference: {fileID: 0}
     - target: {fileID: 224797974263558888, guid: 070a81bf1bbc5aa4aa26e4b514c4bba9,
         type: 2}
@@ -558,7 +558,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 753aa0c02f73b6c4b9f951b5d57ca5d6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -984,6 +984,10 @@ Prefab:
       value: 
       objectReference: {fileID: 12800000, guid: f1913ed990e820444a4d938defda293f,
         type: 3}
+    - target: {fileID: 1939375188726384, guid: 0849548d5df0ae5408e99c1e5a1caa62, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0849548d5df0ae5408e99c1e5a1caa62, type: 2}
   m_IsPrefabParent: 0
@@ -1211,8 +1215,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 753aa0c02f73b6c4b9f951b5d57ca5d6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1259,7 +1263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -90}
+  m_AnchoredPosition: {x: 0, y: -130.25}
   m_SizeDelta: {x: 257, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1934221616
@@ -1431,7 +1435,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1776,7 +1780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 71.1, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2146572201
