@@ -26,6 +26,22 @@ public class EncapsulatedObject : MonoBehaviour {
         this.fakeObject2 = fakeObject2;
     }
 
+    public void OnDestroy()
+    {
+        if (main != null)
+        {
+            Destroy(main);
+        }
+        if (fakeObject1 != null)
+        {
+            Destroy(fakeObject1);
+        }
+        if (fakeObject2 != null)
+        {
+            Destroy(fakeObject2);
+        }
+    }
+
     public void SetEncapsulatedObject()
     {
         // Max alpha is 255 

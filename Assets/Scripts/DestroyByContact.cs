@@ -42,7 +42,7 @@ public class DestroyByContact : MonoBehaviour
                 case "SonarBuff":  // power up
                     sonar.GetComponent<SonarController>().SonarPowers(true);
                     break;
-                case "TimeCutter":  // power down
+                case "SonarDebuff":  // power down
                     sonar.GetComponent<SonarController>().SonarPowers(false);
                     break;
                 case "RareItem"://25
