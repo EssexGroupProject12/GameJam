@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 50259100063608414}
   - component: {fileID: 114637335712984486}
   - component: {fileID: 114766122201173790}
-  - component: {fileID: 114749148024234452}
-  - component: {fileID: 95537819710807966}
-  - component: {fileID: 60478105954399104}
+  - component: {fileID: 114860981108474844}
+  - component: {fileID: 95695428675068048}
+  - component: {fileID: 60136622509056066}
+  - component: {fileID: 82150233607204124}
   m_Layer: 0
   m_Name: MineEMP
   m_TagString: MineEMP
@@ -40,8 +41,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055427832856214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.67, y: -0.38, z: 0}
-  m_LocalScale: {x: 0.86480576, y: 0.8261789, z: 1}
+  m_LocalPosition: {x: -5.092, y: -0.381, z: 0}
+  m_LocalScale: {x: 0.85407966, y: 0.88626885, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -66,7 +67,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60478105954399104
+--- !u!60 &60136622509056066
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -82,7 +83,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.24, y: 3.68}
+    oldSize: {x: 4.56, y: 3.97}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -90,22 +91,102 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.17, y: 0.21}
-      - {x: 0.75, y: 0.83}
-      - {x: 0.35, y: 0.91999996}
-      - {x: -0.61, y: 0.91999996}
-      - {x: -0.63, y: 0.9}
-      - {x: -0.93, y: 0.76}
-      - {x: -0.95, y: 0.74}
-      - {x: -1.16, y: 0.61}
-      - {x: -1.43, y: 0.24}
-      - {x: -1.43, y: -1.11}
-      - {x: -1.1, y: -1.54}
-      - {x: -0.93, y: -1.68}
-      - {x: 0.71, y: -1.68}
-      - {x: 0.85999995, y: -1.56}
-      - {x: 1.17, y: -1.02}
---- !u!95 &95537819710807966
+    - - {x: 1.01, y: 0.49499997}
+      - {x: 0.66999996, y: 0.865}
+      - {x: 0.29999998, y: 0.955}
+      - {x: -0.65999997, y: 0.955}
+      - {x: -1.02, y: 0.85499996}
+      - {x: -1.38, y: 0.545}
+      - {x: -1.48, y: 0.235}
+      - {x: -1.48, y: -1.025}
+      - {x: -1.3399999, y: -1.165}
+      - {x: -1.16, y: -1.4649999}
+      - {x: -1.01, y: -1.645}
+      - {x: 0.69, y: -1.645}
+      - {x: 0.81, y: -1.525}
+      - {x: 1.12, y: -0.98499995}
+      - {x: 1.12, y: 0.13499999}
+--- !u!82 &82150233607204124
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055427832856214}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4515c47c9e404b143924ce4ea2bfd57d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!95 &95695428675068048
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -114,7 +195,7 @@ Animator:
   m_GameObject: {fileID: 1055427832856214}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 920c038904746ec40a09201edbb461c0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2603348dd60656a4f9d175409b9f941a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -134,17 +215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -2
---- !u!114 &114749148024234452
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1055427832856214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5559f2703c5f5654088ff53ef99b4928, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114766122201173790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,6 +224,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 650413461c500c94b8b21bba07637ef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114860981108474844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055427832856214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5559f2703c5f5654088ff53ef99b4928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212774883788753838
@@ -188,8 +269,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e5c2d54363f038042b63efe0073f36ef, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0642a6bdc283c084aaf3f46ed3755623, type: 3}
+  m_Color: {r: 255, g: 255, b: 255, a: 0.55}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

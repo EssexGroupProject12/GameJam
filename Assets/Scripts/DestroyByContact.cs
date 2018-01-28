@@ -42,7 +42,7 @@ public class DestroyByContact : MonoBehaviour
                 case "SonarBuff":  // power up
                     sonar.GetComponent<SonarController>().SonarPowers(true);
                     break;
-                case "TimeCutter":  // power down
+                case "SonarDebuff":  // power down
                     sonar.GetComponent<SonarController>().SonarPowers(false);
                     break;
                 case "RareItem"://25
@@ -52,11 +52,12 @@ public class DestroyByContact : MonoBehaviour
                     GameController.Score += 50;
                     break;
             }
+
+            if (gameObject.GetComponent<AudioSource>() != null)
+            {
+                AudioSource.PlayClipAtPoint(gameObject.GetComponent<AudioSource>().clip, Camera.main.transform.position);
+            }
             Destroy(gameObject);
         }
     }
-
-
-
-
 }

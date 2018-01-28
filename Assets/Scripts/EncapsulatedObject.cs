@@ -26,6 +26,22 @@ public class EncapsulatedObject : MonoBehaviour {
         this.fakeObject2 = fakeObject2;
     }
 
+    public void OnDestroy()
+    {
+        if (main != null)
+        {
+            Destroy(main);
+        }
+        if (fakeObject1 != null)
+        {
+            Destroy(fakeObject1);
+        }
+        if (fakeObject2 != null)
+        {
+            Destroy(fakeObject2);
+        }
+    }
+
     public void SetEncapsulatedObject()
     {
         // Max alpha is 255 
@@ -36,21 +52,43 @@ public class EncapsulatedObject : MonoBehaviour {
 
     public void UpdateVisability()
     {
-        //When ship sonar is on this object
-        //var color = this.GetComponent<SpriteRenderer>().color;
-        //color.a += visablespeed;
-        //this.GetComponent<SpriteRenderer>().color = color;
+        if (main != null)
+        {
+            var colorMain = main.GetComponent<SpriteRenderer>().color;
+            colorMain.a += visableSpeed;
+            main.GetComponent<SpriteRenderer>().color = colorMain;
 
-        var colorMain = main.GetComponent<SpriteRenderer>().color;
-        colorMain.a += visableSpeed;
-        main.GetComponent<SpriteRenderer>().color = colorMain;
+            if (fakeObject1 != null)
+            {
+                var colorFake1 = fakeObject1.GetComponent<SpriteRenderer>().color;
+                colorFake1.a -= visableSpeed;
+                fakeObject1.GetComponent<SpriteRenderer>().color = colorFake1;
+            }
 
-        var colorFake1 = fakeObject1.GetComponent<SpriteRenderer>().color;
-        colorFake1.a -= visableSpeed;
-        fakeObject1.GetComponent<SpriteRenderer>().color = colorFake1;
+            if (fakeObject2 != null)
+            {
+                var colorFake2 = fakeObject2.GetComponent<SpriteRenderer>().color;
+                colorFake2.a -= 2 * visableSpeed;
+                fakeObject2.GetComponent<SpriteRenderer>().color = colorFake2;
+            }
+        }
+        else
+        {
+            if (fakeObject1 != null)
+            {
+                //var colorFake1 = fakeObject1.GetComponent<SpriteRenderer>().color;
+                //colorFake1.a = 0;
+                //fakeObject1.GetComponent<SpriteRenderer>().color = colorFake1;
+                Destroy(fakeObject1);
+            }
 
-        var colorFake2 = fakeObject2.GetComponent<SpriteRenderer>().color;
-        colorFake2.a -= 2*visableSpeed;
-        fakeObject2.GetComponent<SpriteRenderer>().color = colorFake2;
+            if (fakeObject2 != null)
+            {
+                //var colorFake2 = fakeObject2.GetComponent<SpriteRenderer>().color;
+                //colorFake2.a = 0;
+                //fakeObject2.GetComponent<SpriteRenderer>().color = colorFake2;
+                Destroy(fakeObject2);
+            }
+        }
     }
 }
