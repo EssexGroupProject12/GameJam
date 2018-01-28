@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
                 var fakeObject = Collectables[SpawnRates(true)];
                 var fakeInstance = Instantiate(fakeObject, pos, Quaternion.identity);
                 fakeInstance.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+                //fakeInstance.gameObject.GetComponent<AudioSource>().enabled = false;
                 if (i == 0) encapsulatedObject.fakeObject1 = fakeInstance;
                 else encapsulatedObject.fakeObject2 = fakeInstance;
             }
