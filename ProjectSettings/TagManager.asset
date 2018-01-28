@@ -17,6 +17,8 @@ TagManager:
   - boundary
   - Sonar
   - EncapsulatedObject
+  - LevelManager
+  - SonarDebuff
   layers:
   - Default
   - TransparentFX
