@@ -812,6 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10454d46529472f40b43aa6760fd4870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  creditsTimer: 25
 --- !u!1 &1667403475 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1564771541808856, guid: 2bdeffccbc4f26e4ab5787f2b88e76dc,
