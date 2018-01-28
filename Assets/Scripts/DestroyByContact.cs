@@ -27,6 +27,7 @@ public class DestroyByContact : MonoBehaviour
                     break;
                 case "MineEMP":
                     GameController.PlayerController.ChangeSpeedTemporarily();
+                    Instantiate(gameObject.GetComponent<MineExplosion>().Explosion, gameObject.transform.position, Quaternion.identity);
                     break;
                 case "Shoe": //shoe
                     GameController.Score += 1;

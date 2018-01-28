@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 95695428675068048}
   - component: {fileID: 60136622509056066}
   - component: {fileID: 82150233607204124}
+  - component: {fileID: 114949190383181970}
   m_Layer: 0
   m_Name: MineEMP
   m_TagString: MineEMP
@@ -237,6 +238,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5559f2703c5f5654088ff53ef99b4928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114949190383181970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055427832856214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569861d451bd61f4bad8593b62e76cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explosion: {fileID: 1611345173949204, guid: 77350a6b78243cb4b944a2afb6b4f164, type: 2}
 --- !u!212 &212774883788753838
 SpriteRenderer:
   m_ObjectHideFlags: 1
