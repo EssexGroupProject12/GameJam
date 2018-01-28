@@ -42,13 +42,9 @@ public class DestroyByContact : MonoBehaviour
                 case "SonarBuff":  // power up
                     sonar.GetComponent<SonarController>().SonarPowers(true);
                     break;
-                    
+                
             }
             Destroy(gameObject);
         }
     }
-
-
-
-
 }
