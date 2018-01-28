@@ -11,14 +11,13 @@ public class Timer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         StartCoroutine(Counter());
     }
 
     // Update is called once per frame
     void Update()
     {
-        timetext.text = string.Format("Timer : " + countdown);
+        timetext.text = string.Format("Timer: " + countdown);
     }
 
     IEnumerator Counter()
@@ -30,6 +29,4 @@ public class Timer : MonoBehaviour
         }
         SceneManager.LoadScene(5);
     }
-
-
 }
