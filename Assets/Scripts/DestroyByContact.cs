@@ -52,6 +52,11 @@ public class DestroyByContact : MonoBehaviour
                     GameController.Score += 50;
                     break;
             }
+
+            if (gameObject.GetComponent<AudioSource>() != null)
+            {
+                AudioSource.PlayClipAtPoint(gameObject.GetComponent<AudioSource>().clip, Camera.main.transform.position);
+            }
             Destroy(gameObject);
         }
     }
