@@ -592,7 +592,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Find your way out
+  m_Text: discover the deep sea
 --- !u!222 &604890619
 CanvasRenderer:
   m_ObjectHideFlags: 0
