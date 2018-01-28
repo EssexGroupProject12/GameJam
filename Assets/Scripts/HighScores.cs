@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Mime;
 using System.Runtime.CompilerServices;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -70,8 +69,6 @@ public class HighScores : MonoBehaviour
             writer.WriteLine(toWrite);
         }
         writer.Close();
-
-        AssetDatabase.ImportAsset(HighScorePath);
     }
 
     void DeleteStoredScores()
@@ -83,7 +80,6 @@ public class HighScores : MonoBehaviour
         }
         writer.Close();
         Debug.Log("done");
-        AssetDatabase.ImportAsset(HighScorePath);
     }
 
     public class NameScore
