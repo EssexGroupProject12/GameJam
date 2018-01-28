@@ -23,10 +23,9 @@ GameObject:
   - component: {fileID: 50259100063608414}
   - component: {fileID: 114637335712984486}
   - component: {fileID: 114766122201173790}
-  - component: {fileID: 61357721262388618}
-  - component: {fileID: 68627357466051830}
   - component: {fileID: 114860981108474844}
   - component: {fileID: 95695428675068048}
+  - component: {fileID: 60136622509056066}
   m_Layer: 0
   m_Name: SonarBuff
   m_TagString: SonarBuff
@@ -67,13 +66,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61357721262388618
-BoxCollider2D:
+--- !u!60 &60136622509056066
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055427832856214}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -89,59 +88,23 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
-  m_EdgeRadius: 0
---- !u!68 &68627357466051830
-EdgeCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1055427832856214}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.19, y: -0.35}
-  m_EdgeRadius: 0
   m_Points:
-  - {x: -0.010756867, y: -1.2809654}
-  - {x: -0.81957984, y: -1.2439134}
-  - {x: -0.8105046, y: -1.1073644}
-  - {x: -0.94916415, y: -1.1081122}
-  - {x: -0.97323215, y: -0.7894302}
-  - {x: -1.1101071, y: -0.7573266}
-  - {x: -1.1148399, y: -0.61987424}
-  - {x: -1.2649894, y: -0.61018276}
-  - {x: -1.2982012, y: 0.495825}
-  - {x: -1.1258639, y: 0.5060958}
-  - {x: -1.1414479, y: 0.8218161}
-  - {x: -0.9595911, y: 0.8291439}
-  - {x: -0.95399576, y: 0.96946347}
-  - {x: -0.78882504, y: 0.98515725}
-  - {x: -0.809326, y: 1.1405003}
-  - {x: -0.47808796, y: 1.1559936}
-  - {x: -0.47908399, y: 1.3097999}
-  - {x: 0.45238918, y: 1.3145491}
-  - {x: 0.49946436, y: 1.150244}
-  - {x: 0.79402006, y: 1.1563854}
-  - {x: 0.8040863, y: 0.98394346}
-  - {x: 0.9513365, y: 0.9712257}
-  - {x: 0.95047396, y: 0.81496674}
-  - {x: 1.1153293, y: 0.81018394}
-  - {x: 1.1368904, y: 0.52253336}
-  - {x: 1.2832646, y: 0.49988925}
-  - {x: 1.3055131, y: -0.6007065}
-  - {x: 1.1303197, y: -0.6250861}
-  - {x: 1.1283467, y: -0.7634967}
-  - {x: 0.97177273, y: -0.7896868}
-  - {x: 0.96536565, y: -1.1033973}
-  - {x: 0.8138885, y: -1.0921649}
-  - {x: 0.7983352, y: -1.2384535}
-  - {x: 0.765915, y: -1.2618856}
-  - {x: 0.03507162, y: -1.2497225}
+    m_Paths:
+    - - {x: 1.01, y: 0.49499997}
+      - {x: 0.66999996, y: 0.865}
+      - {x: 0.29999998, y: 0.955}
+      - {x: -0.65999997, y: 0.955}
+      - {x: -1.02, y: 0.85499996}
+      - {x: -1.38, y: 0.545}
+      - {x: -1.48, y: 0.235}
+      - {x: -1.48, y: -1.025}
+      - {x: -1.3399999, y: -1.165}
+      - {x: -1.16, y: -1.4649999}
+      - {x: -1.01, y: -1.645}
+      - {x: 0.69, y: -1.645}
+      - {x: 0.81, y: -1.525}
+      - {x: 1.12, y: -0.98499995}
+      - {x: 1.12, y: 0.13499999}
 --- !u!95 &95695428675068048
 Animator:
   serializedVersion: 3
@@ -182,7 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650413461c500c94b8b21bba07637ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameController: {fileID: 0}
 --- !u!114 &114860981108474844
 MonoBehaviour:
   m_ObjectHideFlags: 1
