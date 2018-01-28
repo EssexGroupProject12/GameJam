@@ -2,13 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Mime;
 using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HighScores : MonoBehaviour
 {
     private string HighScorePath;
+    public GameObject HighScoreScreenText;
     private StreamWriter writer;
     private string[] HighScoresLine = new string[10]; // all line from file as string
     private NameScore[] NameScoreLine = new NameScore[10]; // high scores seperated
@@ -17,9 +20,12 @@ public class HighScores : MonoBehaviour
 	{
 	    HighScorePath = "Assets/HighScores.txt";
         //DeleteStoredScores();
-
         ReadHighScores();
-        WriteHighScore(SortNewScores(NameScoreLine,0,"Max"));
+        HighScoreScreenText.GetComponent<Text>().text = "HighScores:";
+        WriteHighScore(SortNewScores(NameScoreLine, PlayerSettings.LastScore));
+        
+        //int curscore = PlayerSettings.LastScore;
+
 	}
 	
 	// Update is called once per frame
@@ -58,7 +64,10 @@ public class HighScores : MonoBehaviour
         foreach (NameScore addNewScore in NewScoresToAdd)
         {
             //Debug.Log(string.Format("{0},{1},{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score));
-            writer.WriteLine(string.Format("{0},{1},{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score));
+            string toWrite = string.Format("{0},{1},{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score);
+            HighScoreScreenText.GetComponent<Text>().text += "\n\n" + string.Format("{0},\t{1},\t{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score);
+
+            writer.WriteLine(toWrite);
         }
         writer.Close();
 

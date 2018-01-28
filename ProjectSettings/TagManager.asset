@@ -19,6 +19,7 @@ TagManager:
   - EncapsulatedObject
   - LevelManager
   - SonarDebuff
+  - Score
   layers:
   - Default
   - TransparentFX
