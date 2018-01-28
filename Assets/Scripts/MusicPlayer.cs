@@ -47,4 +47,9 @@ public class MusicPlayer : MonoBehaviour
             AudioListener.volume = 0;
         }
     }
+
+    public void SetVolume(float volume)
+    {
+        AudioListener.volume = volume;
+    }
 }

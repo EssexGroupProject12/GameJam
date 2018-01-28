@@ -24,9 +24,9 @@ public class VolumeControl : MonoBehaviour
     {
 
         volume = slides.value;
-        
 
-        audioObject.GetComponent<AudioSource>().volume = volume;
+        MusicPlayer.instance.SetVolume(volume);
+        //audioObject.GetComponent<AudioSource>().volume = volume;
     }
     void Update()
     {
