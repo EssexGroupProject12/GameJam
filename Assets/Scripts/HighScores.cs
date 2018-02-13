@@ -17,7 +17,8 @@ public class HighScores : MonoBehaviour
     // Use this for initialization
     void Start ()
 	{
-	    HighScorePath = "Assets/HighScores.txt";
+        string dir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        HighScorePath = dir + "/HighScores.txt";
         //DeleteStoredScores();
         ReadHighScores();
         HighScoreScreenText.GetComponent<Text>().text = "HighScores:";
@@ -36,23 +37,32 @@ public class HighScores : MonoBehaviour
     {
         int lineCounter = 0;
 
-        StreamReader reader = new StreamReader(HighScorePath);
-        while (reader.Peek() >= 0)
+        if (File.Exists(HighScorePath))
         {
-            HighScoresLine[lineCounter] = reader.ReadLine();
-            string[] lineTemp = HighScoresLine[lineCounter].Split(',');
-            int tempRank = Convert.ToInt32(lineTemp[0]);
-            string tempname = lineTemp[1];
-            int tempScore = Convert.ToInt32(lineTemp[2]);
-            
+            StreamReader reader = new StreamReader(HighScorePath);
+            while (reader.Peek() >= 0)
+            {
+                HighScoresLine[lineCounter] = reader.ReadLine();
+                string[] lineTemp = HighScoresLine[lineCounter].Split(',');
+                int tempRank = Convert.ToInt32(lineTemp[0]);
+                string tempname = lineTemp[1];
+                int tempScore = Convert.ToInt32(lineTemp[2]);
 
-            NameScoreLine[lineCounter] = (new NameScore(tempRank, tempname, tempScore));
-            //Debug.Log(NameScoreLine[lineCounter].Rank + NameScoreLine[lineCounter].Name+ NameScoreLine[lineCounter].Score);
-            lineCounter++;
+
+                NameScoreLine[lineCounter] = (new NameScore(tempRank, tempname, tempScore));
+                //Debug.Log(NameScoreLine[lineCounter].Rank + NameScoreLine[lineCounter].Name+ NameScoreLine[lineCounter].Score);
+                lineCounter++;
+            }
+            reader.Close();
+            //Debug.Log(SortNewScores(NameScoreLine, 5));
         }
-        reader.Close();
-        //Debug.Log(SortNewScores(NameScoreLine, 5));
-
+        else
+        {
+            for (int i = 0; i < NameScoreLine.Length; i++)
+            {
+                NameScoreLine[i] = new NameScore(i + 1, "", 0);
+            }
+        }
     }
 
     void WriteHighScore(NameScore[] NewScoresToAdd)

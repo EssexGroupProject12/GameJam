@@ -543,7 +543,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'cores:'
+  m_Text: 'High scores:'
 --- !u!222 &1937509345
 CanvasRenderer:
   m_ObjectHideFlags: 0
