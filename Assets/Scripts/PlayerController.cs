@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float Speed;
     public float Padding;
+    public bool AllowVerticalMovement;
 
     private float XMin;
     private float XMax;
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         var horizontalInput = Input.GetAxis("Horizontal");
         var verticalInput = Input.GetAxis("Vertical");
-        var speedVector = new Vector3(horizontalInput * Speed, verticalInput * Speed, 0);
+        var speedVector = new Vector3(horizontalInput * Speed, AllowVerticalMovement ? verticalInput * Speed : 0, 0);
         Rigidbody.velocity = speedVector;
 
         transform.position = new Vector3(Mathf.Clamp(Rigidbody.position.x, XMin, XMax), Mathf.Clamp(Rigidbody.position.y, YMin, YMax), 0);
