@@ -10,36 +10,36 @@ using UnityEngine.UI;
 public class HighScores : MonoBehaviour
 {
     private string HighScorePath;
-    public GameObject HighScoreScreenText;
+    private string HighScorePathDaily;
+    public GameObject HighScoreText;
+    public GameObject HighScoreDailyText;
     private StreamWriter writer;
     private string[] HighScoresLine = new string[10]; // all line from file as string
     private NameScore[] NameScoreLine = new NameScore[10]; // high scores seperated
-    // Use this for initialization
-    void Start ()
+
+    private void Start ()
 	{
         string dir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         HighScorePath = dir + "/HighScores.txt";
-        //DeleteStoredScores();
-        ReadHighScores();
-        HighScoreScreenText.GetComponent<Text>().text = "HighScores:";
-        WriteHighScore(SortNewScores(NameScoreLine, PlayerSettings.LastScore));
-        
-        //int curscore = PlayerSettings.LastScore;
+        HighScorePathDaily = dir + "/HighScoresDaily.txt";
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        ReadHighScores(HighScorePath);
+        HighScoreText.GetComponent<Text>().text = "HighScores:";
+        WriteHighScore(SortNewScores(NameScoreLine, PlayerSettings.LastScore), HighScorePath, HighScoreText);
 
-    void ReadHighScores()
+        CheckDailyScores(HighScorePathDaily);
+        ReadHighScores(HighScorePathDaily);
+        HighScoreDailyText.GetComponent<Text>().text = "Daily HighScores:";
+        WriteHighScore(SortNewScores(NameScoreLine, PlayerSettings.LastScore), HighScorePathDaily, HighScoreDailyText);
+    }
+
+    private void ReadHighScores(string path)
     {
         int lineCounter = 0;
 
-        if (File.Exists(HighScorePath))
+        if (File.Exists(path))
         {
-            StreamReader reader = new StreamReader(HighScorePath);
+            StreamReader reader = new StreamReader(path);
             while (reader.Peek() >= 0)
             {
                 HighScoresLine[lineCounter] = reader.ReadLine();
@@ -65,25 +65,33 @@ public class HighScores : MonoBehaviour
         }
     }
 
-    void WriteHighScore(NameScore[] NewScoresToAdd)
+    void WriteHighScore(NameScore[] NewScoresToAdd, string path, GameObject highScoreText)
     {
-        writer = new StreamWriter(HighScorePath, false);
-
+        writer = new StreamWriter(path, false);
 
         foreach (NameScore addNewScore in NewScoresToAdd)
         {
             //Debug.Log(string.Format("{0},{1},{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score));
             string toWrite = string.Format("{0},{1},{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score);
-            HighScoreScreenText.GetComponent<Text>().text += "\n\n" + string.Format("{0},\t{1},\t{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score);
+            highScoreText.GetComponent<Text>().text += "\n\n" + string.Format("{0},\t{1},\t{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score);
 
             writer.WriteLine(toWrite);
         }
         writer.Close();
     }
 
-    void DeleteStoredScores()
+    private void CheckDailyScores(string path)
     {
-        writer = new StreamWriter(HighScorePath,false);
+        var fileInfo = new FileInfo(path);
+        if (fileInfo.Exists && fileInfo.LastWriteTime.Date < DateTime.Now.Date)
+        {
+            DeleteStoredScores(path);
+        }
+    }
+
+    void DeleteStoredScores(string path)
+    {
+        writer = new StreamWriter(path,false);
         for (int i = 1; i < 11; i++)
         {
             writer.WriteLine(i + ",,0");
@@ -104,7 +112,6 @@ public class HighScores : MonoBehaviour
             Score = _Score;
             Rank = _Rank;
         }
-        
     }
 
     public NameScore[] SortNewScores(NameScore[] unsortedScores, int newScore, string newName = "")
@@ -133,5 +140,4 @@ public class HighScores : MonoBehaviour
         
         return tempSortNameScores;
     }
-
 }

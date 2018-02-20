@@ -31,6 +31,6 @@ public class Timer : MonoBehaviour
         }
 
         PlayerSettings.LastScore = gameController.Score;
-        SceneManager.LoadScene("Lose");
+        SceneManager.LoadScene("End");
     }
 }
