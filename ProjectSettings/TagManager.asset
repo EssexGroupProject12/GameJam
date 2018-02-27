@@ -20,6 +20,7 @@ TagManager:
   - LevelManager
   - SonarDebuff
   - Score
+  - Hook
   layers:
   - Default
   - TransparentFX
