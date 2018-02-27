@@ -20,6 +20,17 @@ TagManager:
   - LevelManager
   - SonarDebuff
   - Score
+  - Fish1
+  - Fish2
+  - Fish3
+  - Fish4
+  - Fish5
+  - Fish6
+  - BananaPeel
+  - Can
+  - Toothbrush
+  - Hook
+  - Bottle
   layers:
   - Default
   - TransparentFX

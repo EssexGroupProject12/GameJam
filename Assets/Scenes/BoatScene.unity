@@ -801,16 +801,16 @@ MonoBehaviour:
   Score: 0
   ScoreText: {fileID: 1151545737}
   Collectables:
-  - {fileID: 1055427832856214, guid: 81a1e5bbdf4bc79458549628279303f1, type: 2}
-  - {fileID: 1055427832856214, guid: 2e701c590254e8c43a24dfe516c5382b, type: 2}
-  - {fileID: 1753967062491440, guid: 6ef6b2c6a95d26644849882c680fec62, type: 2}
-  - {fileID: 1055427832856214, guid: e8872dab95a3e7e4786576e87acc8c45, type: 2}
-  - {fileID: 1055427832856214, guid: c31fd7012e6be9047a965a60c7769fa2, type: 2}
-  - {fileID: 1407955671700104, guid: 6c0942e2112081640bf719f1cd12f4a9, type: 2}
-  - {fileID: 1055427832856214, guid: 5dc2fd085eaab534392b28f799a0c6a8, type: 2}
-  - {fileID: 1055427832856214, guid: 8d6fcbb9d0d7469469997ee406f52b64, type: 2}
-  - {fileID: 1055427832856214, guid: 418cd64c615fb504081258f225c13007, type: 2}
-  - {fileID: 1055427832856214, guid: dd0da2b24faeebf4197636242437553c, type: 2}
+  - {fileID: 1055427832856214, guid: 43ec49ffc1d57a340b96089c9b757abc, type: 2}
+  - {fileID: 1055427832856214, guid: d78690fa4d76c374e83e3e618bf83f98, type: 2}
+  - {fileID: 1055427832856214, guid: 5224c01286f11934295a036b7cf732fd, type: 2}
+  - {fileID: 1055427832856214, guid: 9ee810da4bb009a40b8441131d946b89, type: 2}
+  - {fileID: 1055427832856214, guid: dc0807c9c6e60eb4b95f110bc1063fac, type: 2}
+  - {fileID: 1055427832856214, guid: 1e5ce6ed27313df4b8066fde94b72b74, type: 2}
+  - {fileID: 1055427832856214, guid: a3a1a7b6e43ab3042b57f3034a05cf1f, type: 2}
+  - {fileID: 1055427832856214, guid: 991af03d0e25633439f62ddeab9e1db8, type: 2}
+  - {fileID: 1055427832856214, guid: 4d59fe2da2cf07d4bb129427e9cec006, type: 2}
+  - {fileID: 1055427832856214, guid: 0012a08b589e4ea4087a6e1e0e97910b, type: 2}
   EncapsulatedObject: {fileID: 1795399347746268, guid: 32eed3863894bfb4a9a5a3c27226cf8e,
     type: 2}
 --- !u!50 &1537924747
