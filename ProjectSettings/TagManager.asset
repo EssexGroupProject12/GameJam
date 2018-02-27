@@ -20,7 +20,6 @@ TagManager:
   - LevelManager
   - SonarDebuff
   - Score
-  - Hook
   - Fish1
   - Fish2
   - Fish3
