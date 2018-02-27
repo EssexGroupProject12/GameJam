@@ -19,42 +19,54 @@ public class DestroyByContact : MonoBehaviour
         { 
             switch (gameObject.tag)
             {
-                case "Coin": //coin
+                case "Coin":
+                case "BananaPeel":
                     GameController.Score += 5;
                     break;
-                case "Chest": //treasure chest
+                case "Chest":
+                case "Bottle":
                     GameController.Score += 10;
                     break;
                 case "MineEMP":
                     GameController.PlayerController.ChangeSpeedTemporarily();
                     Instantiate(gameObject.GetComponent<MineExplosion>().Explosion, gameObject.transform.position, Quaternion.identity);
                     break;
-                case "Shoe": //shoe
+                case "Can":
+                    GameController.PlayerController.ChangeSpeedTemporarily();
+                    break;
+                case "Shoe":
+                case "Fish1":
                     GameController.Score += 1;
                     break;
                 case "Monster":  //shark
+                case "Fish2":
                     if (GameController.Score >= 10) GameController.Score -= 10;
                     else GameController.Score = 0;
                     break;
-                case "MineDamage":  //damage mine
+                case "MineDamage":
+                case "Fish3":
                     if (GameController.Score >= 5) GameController.Score -= 5;
                     else GameController.Score = 0;
                     break;
                 case "SonarBuff":  // power up
+                case "Fish4":
                     sonar.GetComponent<SonarController>().SonarPowers(true);
                     break;
                 case "SonarDebuff":  // power down
+                case "Fish5":
                     sonar.GetComponent<SonarController>().SonarPowers(false);
                     break;
-                case "RareItem"://25
+                case "RareItem":
+                case "Fish6":
                     GameController.Score += 25;
                     break;
-                case "UniqueItem"://50
+                case "UniqueItem":
+                case "Toothbrush":
                     GameController.Score += 50;
                     break;
             }
 
-            if (gameObject.GetComponent<AudioSource>() != null)
+            if (gameObject.GetComponent<AudioSource>() != null && gameObject.GetComponent<AudioSource>().clip != null)
             {
                 AudioSource.PlayClipAtPoint(gameObject.GetComponent<AudioSource>().clip, Camera.main.transform.position);
             }

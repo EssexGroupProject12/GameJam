@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 82432525692172768}
   m_Layer: 0
   m_Name: BananaPeel
-  m_TagString: Untagged
+  m_TagString: BananaPeel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
