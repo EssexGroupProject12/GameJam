@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         //Invoke("ResetSpeed", 3f);
     }
 
-    private void ResetSpeed()   
+    public void ResetSpeed()   
     {
         Speed = OriginalSpeed;
         SpriteRenderer.color = OriginalColor;

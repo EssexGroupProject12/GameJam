@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
     public GameObject EncapsulatedObject;
     public PlayerController PlayerController { get; private set; }
     private int SpawnRange;
+    private int minSpeed = -3, maxSpeed = -1;
+    public bool sub = true;
 
     private void Start()
     {
@@ -31,14 +33,24 @@ public class GameController : MonoBehaviour
     {
         while (true)
         {
-            var pos = new Vector3(8, Random.Range(-3, 3), 0);
+            var pos = new Vector3(8, Random.Range(-7, 3) / 2, 0);
+            if (sub)
+            {
+                pos = new Vector3(8, Random.Range(-3, 3), 0);
+            }
+            
             var encapsulatedObject = Instantiate(EncapsulatedObject, pos, Quaternion.identity).GetComponent<EncapsulatedObject>();
             var main = Collectables[SpawnRates(false)];
+            var speed = Random.Range(minSpeed, maxSpeed);
+            main.GetComponent<Mover>().Speed = speed;
+            
             encapsulatedObject.main = Instantiate(main, pos, Quaternion.identity);
+            
            
             for (int i = 0; i < 2; i++)
             {
                 var fakeObject = Collectables[SpawnRates(true)];
+                fakeObject.GetComponent<Mover>().Speed = speed;
                 var fakeInstance = Instantiate(fakeObject, pos, Quaternion.identity);
                 fakeInstance.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
                 //fakeInstance.gameObject.GetComponent<AudioSource>().enabled = false;
