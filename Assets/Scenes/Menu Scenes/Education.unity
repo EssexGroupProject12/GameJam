@@ -144,8 +144,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 333.5, y: -187.3}
-  m_SizeDelta: {x: 84.18, y: 25.5}
+  m_AnchoredPosition: {x: 692.6, y: -478.6}
+  m_SizeDelta: {x: 193.5, y: 77.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574628440
 MonoBehaviour:
@@ -194,7 +194,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Win
+          m_StringArgument: Start
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -328,11 +328,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 166
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -523,7 +523,7 @@ Animator:
   m_GameObject: {fileID: 1905645859}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 39b5096dc3a185a49822eece1688612a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8cd1f937c93511d408bcb8b0ba35a778, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -580,8 +580,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1905645859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 3.3477647, y: 2.7228477, z: 1}
+  m_LocalPosition: {x: -0.09, y: -0, z: 0}
+  m_LocalScale: {x: 2.3813238, y: 2.7228477, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
