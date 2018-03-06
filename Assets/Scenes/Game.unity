@@ -272,10 +272,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3826,11 +3826,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4844236645837612, guid: c401b0ffe80ab954ea7ddb76d6e28771, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.27
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4844236645837612, guid: c401b0ffe80ab954ea7ddb76d6e28771, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.66
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 4844236645837612, guid: c401b0ffe80ab954ea7ddb76d6e28771, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3864,6 +3864,31 @@ Prefab:
     - target: {fileID: 1223871439526718, guid: c401b0ffe80ab954ea7ddb76d6e28771, type: 2}
       propertyPath: m_TagString
       value: Sonar
+      objectReference: {fileID: 0}
+    - target: {fileID: 60420594319649232, guid: c401b0ffe80ab954ea7ddb76d6e28771,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -0.0476752
+      objectReference: {fileID: 0}
+    - target: {fileID: 60420594319649232, guid: c401b0ffe80ab954ea7ddb76d6e28771,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 0.49726388
+      objectReference: {fileID: 0}
+    - target: {fileID: 60420594319649232, guid: c401b0ffe80ab954ea7ddb76d6e28771,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: 0.031987984
+      objectReference: {fileID: 0}
+    - target: {fileID: 60420594319649232, guid: c401b0ffe80ab954ea7ddb76d6e28771,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 0.49397022
+      objectReference: {fileID: 0}
+    - target: {fileID: 212858077938556190, guid: c401b0ffe80ab954ea7ddb76d6e28771,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c401b0ffe80ab954ea7ddb76d6e28771, type: 2}
@@ -4144,6 +4169,7 @@ MonoBehaviour:
   - {fileID: 1055427832856214, guid: dd0da2b24faeebf4197636242437553c, type: 2}
   EncapsulatedObject: {fileID: 1795399347746268, guid: 32eed3863894bfb4a9a5a3c27226cf8e,
     type: 2}
+  sub: 1
 --- !u!50 &1537924747
 Rigidbody2D:
   serializedVersion: 4

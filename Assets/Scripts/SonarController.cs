@@ -11,6 +11,7 @@ public class SonarController : MonoBehaviour
 	private Vector2 SonarPos;
     private float[] powerModifier = new float[2];
     public bool sub = true;
+    public float ofsetamount = 0;
 
     // Use this for initialization
     void Start ()
@@ -43,14 +44,14 @@ public class SonarController : MonoBehaviour
 	{
         if (sub)
         {
-            offset = this.transform.localScale.y / 2 + PlayerGameObject.GetComponent<Renderer>().bounds.size.x / 2;
-            SonarPos = new Vector2(PlayerGameObject.transform.position.x + offset, PlayerGameObject.transform.position.y - 0.4f);
+            offset = this.transform.localScale.y / 2 + PlayerGameObject.GetComponent<Renderer>().bounds.size.x / 2 - ofsetamount;
+            SonarPos = new Vector2(PlayerGameObject.transform.position.x + offset, PlayerGameObject.transform.position.y - 0.5f);
             this.transform.position = SonarPos;
         }
         else
         {
             offset = this.transform.localScale.y / 2 + PlayerGameObject.GetComponent<Renderer>().bounds.size.y / 2;
-            SonarPos = new Vector2(PlayerGameObject.transform.position.x, PlayerGameObject.transform.position.y - offset);
+            SonarPos = new Vector2(PlayerGameObject.transform.position.x + 0.21f, PlayerGameObject.transform.position.y - offset);
             this.transform.position = SonarPos;
         }
 
