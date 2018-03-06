@@ -318,10 +318,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -528,11 +528,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4844236645837612, guid: c401b0ffe80ab954ea7ddb76d6e28771, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.87
+      value: -4.43
       objectReference: {fileID: 0}
     - target: {fileID: 4844236645837612, guid: c401b0ffe80ab954ea7ddb76d6e28771, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.25
+      value: -2.19
       objectReference: {fileID: 0}
     - target: {fileID: 4844236645837612, guid: c401b0ffe80ab954ea7ddb76d6e28771, type: 2}
       propertyPath: m_LocalPosition.z
@@ -851,16 +851,16 @@ MonoBehaviour:
   Score: 0
   ScoreText: {fileID: 1151545737}
   Collectables:
-  - {fileID: 1055427832856214, guid: 0012a08b589e4ea4087a6e1e0e97910b, type: 2}
-  - {fileID: 1055427832856214, guid: 991af03d0e25633439f62ddeab9e1db8, type: 2}
-  - {fileID: 1055427832856214, guid: 1e5ce6ed27313df4b8066fde94b72b74, type: 2}
-  - {fileID: 1055427832856214, guid: 9ee810da4bb009a40b8441131d946b89, type: 2}
-  - {fileID: 1055427832856214, guid: 4d59fe2da2cf07d4bb129427e9cec006, type: 2}
-  - {fileID: 1055427832856214, guid: 5224c01286f11934295a036b7cf732fd, type: 2}
-  - {fileID: 1055427832856214, guid: a3a1a7b6e43ab3042b57f3034a05cf1f, type: 2}
-  - {fileID: 1055427832856214, guid: d78690fa4d76c374e83e3e618bf83f98, type: 2}
   - {fileID: 1055427832856214, guid: 43ec49ffc1d57a340b96089c9b757abc, type: 2}
+  - {fileID: 1055427832856214, guid: d78690fa4d76c374e83e3e618bf83f98, type: 2}
+  - {fileID: 1055427832856214, guid: 5224c01286f11934295a036b7cf732fd, type: 2}
+  - {fileID: 1055427832856214, guid: 9ee810da4bb009a40b8441131d946b89, type: 2}
   - {fileID: 1055427832856214, guid: dc0807c9c6e60eb4b95f110bc1063fac, type: 2}
+  - {fileID: 1055427832856214, guid: 1e5ce6ed27313df4b8066fde94b72b74, type: 2}
+  - {fileID: 1055427832856214, guid: a3a1a7b6e43ab3042b57f3034a05cf1f, type: 2}
+  - {fileID: 1055427832856214, guid: 991af03d0e25633439f62ddeab9e1db8, type: 2}
+  - {fileID: 1055427832856214, guid: 4d59fe2da2cf07d4bb129427e9cec006, type: 2}
+  - {fileID: 1055427832856214, guid: 0012a08b589e4ea4087a6e1e0e97910b, type: 2}
   EncapsulatedObject: {fileID: 1795399347746268, guid: 32eed3863894bfb4a9a5a3c27226cf8e,
     type: 2}
   sub: 0
@@ -915,7 +915,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4899216063790508, guid: aa7a846ba6af70042b78249b3da021b3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.39
+      value: -4.62
       objectReference: {fileID: 0}
     - target: {fileID: 4899216063790508, guid: aa7a846ba6af70042b78249b3da021b3, type: 2}
       propertyPath: m_LocalPosition.y
