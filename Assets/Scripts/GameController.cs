@@ -39,9 +39,11 @@ public class GameController : MonoBehaviour
                 pos = new Vector3(8, Random.Range(-3, 3), 0);
             }
             
-            var encapsulatedObject = Instantiate(EncapsulatedObject, pos, Quaternion.identity).GetComponent<EncapsulatedObject>();
+            var encap = Instantiate(EncapsulatedObject, pos, Quaternion.identity);
+            var encapsulatedObject = encap.GetComponent<EncapsulatedObject>();
             var main = Collectables[SpawnRates(false)];
             var speed = Random.Range(minSpeed, maxSpeed);
+            encap.GetComponent<Mover>().Speed = speed;
             main.GetComponent<Mover>().Speed = speed;
             
             encapsulatedObject.main = Instantiate(main, pos, Quaternion.identity);
