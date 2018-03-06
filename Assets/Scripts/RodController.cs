@@ -33,7 +33,7 @@ public class RodController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && !RodCastingOff && !RodReelingIn)
         {
             RodCastingOff = true;
-            PlayerController.Speed = 0;
+            PlayerController.HookActive = true;
             var startPositionVector = new Vector3(Hook.transform.position.x, Hook.transform.position.y + 0.28f, -1);
             LineRenderer.SetPosition(0, startPositionVector);
             LineRenderer.SetPosition(1, startPositionVector);
@@ -67,10 +67,16 @@ public class RodController : MonoBehaviour
             {
                 RodCastingOff = false;
                 RodReelingIn = false;
-                PlayerController.ResetSpeed();
+                PlayerController.HookActive = false;
                 LineRenderer.SetPosition(0, new Vector3());
                 LineRenderer.SetPosition(1, new Vector3());
             }
         }
+    }
+
+    public void ReelRodIn()
+    {
+        RodCastingOff = false;
+        RodReelingIn = true;
     }
 }
