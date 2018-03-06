@@ -82,6 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerGameObject: {fileID: 0}
+  sub: 1
+  ofsetamount: 0.2
 --- !u!212 &212858077938556190
 SpriteRenderer:
   m_ObjectHideFlags: 1
