@@ -15,11 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Scenes/Options.unity
     guid: 2cf29e3162b15294caee7c76e4c97315
   - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Education.unity
+    guid: 09854b07232c3af48b4087a7fc05fd83
+  - enabled: 0
+    path: 
+    guid: 16fa9efe839fcfa44ac354fc59c72576
+  - enabled: 1
     path: Assets/Scenes/Menu Scenes/Instructions.unity
     guid: a7cb6e281ede0b146ae85ed9cd748c74
   - enabled: 1
-    path: Assets/Scenes/Menu Scenes/Win.unity
-    guid: 16fa9efe839fcfa44ac354fc59c72576
+    path: Assets/Scenes/Menu Scenes/LevelSelection.unity
+    guid: bc2fbe3ed4673294294f222378227e97
   - enabled: 1
     path: Assets/Scenes/Menu Scenes/End.unity
     guid: cd33936e813ab464db4806e16aa86d0d
