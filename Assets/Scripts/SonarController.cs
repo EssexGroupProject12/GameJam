@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SonarController : MonoBehaviour
 {
-    
-
 	public GameObject PlayerGameObject;
 	private float offset;
 	private Vector2 SonarPos;
@@ -29,15 +27,11 @@ public class SonarController : MonoBehaviour
 
 	void OnTriggerStay2D(Collider2D coll)
 	{
-	    if (coll.gameObject.tag == "EncapsulatedObject")
-	    {
-	        
-                coll.GetComponent<EncapsulatedObject>().UpdateVisability();
-            
-            
-	        
-	    }
-	}
+        if (coll.gameObject.tag == "EncapsulatedObject")
+        {
+            coll.GetComponent<EncapsulatedObject>().UpdateVisability();
+        }
+    }
 
 
 	void UpdatePos()

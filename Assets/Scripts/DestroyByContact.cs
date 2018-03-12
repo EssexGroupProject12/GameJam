@@ -6,17 +6,12 @@ public class DestroyByContact : MonoBehaviour
 {
     private GameController GameController;
     private GameObject sonar;
-    private RodController RodController;
 
     private void Start()
     {
         GameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         sonar = GameObject.FindGameObjectWithTag("Sonar");
         var rod = GameObject.FindGameObjectWithTag("Rod");
-        if (rod != null)
-        {
-            RodController = rod.GetComponent<RodController>();
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -76,10 +71,9 @@ public class DestroyByContact : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(gameObject.GetComponent<AudioSource>().clip, Camera.main.transform.position);
             }
-            if (RodController != null)
-            {
-                RodController.ReelRodIn();
-            }
+
+            var rod = GameObject.FindGameObjectWithTag("Rod");
+            if (rod != null) rod.GetComponent<RodController>().ReelRodIn();
 
             Destroy(gameObject);
         }

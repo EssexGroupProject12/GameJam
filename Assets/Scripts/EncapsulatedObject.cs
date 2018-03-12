@@ -7,17 +7,23 @@ public class EncapsulatedObject : MonoBehaviour {
     public GameObject fakeObject1;
     public GameObject fakeObject2;
     private float visableSpeed = 0.005f;
-
-
-    // Use this for initialization
-    void Start () {
-        
-    }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	private void Update ()
+    {
+        if (main == null)
+        {
+            if (fakeObject1 != null)
+            {
+                Destroy(fakeObject1);
+            }
+
+            if (fakeObject2 != null)
+            {
+                Destroy(fakeObject2);
+            }
+        }
+    }
 
     public void AssignObjects(GameObject main, GameObject fakeObject1, GameObject fakeObject2)
     {
@@ -70,24 +76,6 @@ public class EncapsulatedObject : MonoBehaviour {
                 var colorFake2 = fakeObject2.GetComponent<SpriteRenderer>().color;
                 colorFake2.a -= 2 * visableSpeed;
                 fakeObject2.GetComponent<SpriteRenderer>().color = colorFake2;
-            }
-        }
-        else
-        {
-            if (fakeObject1 != null)
-            {
-                //var colorFake1 = fakeObject1.GetComponent<SpriteRenderer>().color;
-                //colorFake1.a = 0;
-                //fakeObject1.GetComponent<SpriteRenderer>().color = colorFake1;
-                Destroy(fakeObject1);
-            }
-
-            if (fakeObject2 != null)
-            {
-                //var colorFake2 = fakeObject2.GetComponent<SpriteRenderer>().color;
-                //colorFake2.a = 0;
-                //fakeObject2.GetComponent<SpriteRenderer>().color = colorFake2;
-                Destroy(fakeObject2);
             }
         }
     }
