@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HighScores : MonoBehaviour
+    //TODO create different highscore files for each lvl
 {
     private string HighScorePath;
     private string HighScorePathDaily;
