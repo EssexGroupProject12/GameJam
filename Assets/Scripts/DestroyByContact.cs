@@ -11,6 +11,7 @@ public class DestroyByContact : MonoBehaviour
     {
         GameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         sonar = GameObject.FindGameObjectWithTag("Sonar");
+        var rod = GameObject.FindGameObjectWithTag("Rod");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -70,6 +71,10 @@ public class DestroyByContact : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(gameObject.GetComponent<AudioSource>().clip, Camera.main.transform.position);
             }
+
+            var rod = GameObject.FindGameObjectWithTag("Rod");
+            if (rod != null) rod.GetComponent<RodController>().ReelRodIn();
+
             Destroy(gameObject);
         }
     }

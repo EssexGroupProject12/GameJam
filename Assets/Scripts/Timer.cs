@@ -26,11 +26,12 @@ public class Timer : MonoBehaviour
     {
         while (countdown > 0)
         {
-            Debug.Log(countdown--);
+            countdown--;
+            Debug.Log(countdown);
             yield return new WaitForSeconds(1);
         }
 
         PlayerSettings.LastScore = gameController.Score;
-        SceneManager.LoadScene("End");
+        SceneManager.LoadScene("Education");
     }
 }

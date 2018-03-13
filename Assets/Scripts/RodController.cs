@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RodController : MonoBehaviour
 {
+    public int RodSpeed;
     private LineRenderer LineRenderer { get; set; }
     private GameObject Player { get; set; }
     private PlayerController PlayerController { get; set; }
@@ -33,7 +34,7 @@ public class RodController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && !RodCastingOff && !RodReelingIn)
         {
             RodCastingOff = true;
-            PlayerController.Speed = 0;
+            PlayerController.HookActive = true;
             var startPositionVector = new Vector3(Hook.transform.position.x, Hook.transform.position.y + 0.28f, -1);
             LineRenderer.SetPosition(0, startPositionVector);
             LineRenderer.SetPosition(1, startPositionVector);
@@ -42,7 +43,7 @@ public class RodController : MonoBehaviour
         if (RodCastingOff)
         {
             var secondPosition = LineRenderer.GetPosition(1);
-            var newPositionVector = new Vector3(Hook.transform.position.x, secondPosition.y - Time.deltaTime * 2, -1);
+            var newPositionVector = new Vector3(Hook.transform.position.x, secondPosition.y - Time.deltaTime * RodSpeed, -1);
             if (newPositionVector.y > MinY)
             {
                 LineRenderer.SetPosition(1, newPositionVector);
@@ -57,7 +58,7 @@ public class RodController : MonoBehaviour
         else if (RodReelingIn)
         {
             var secondPosition = LineRenderer.GetPosition(1);
-            var newPositionVector = new Vector3(Hook.transform.position.x, secondPosition.y + Time.deltaTime * 4, -1);
+            var newPositionVector = new Vector3(Hook.transform.position.x, secondPosition.y + Time.deltaTime * (RodSpeed * 2), -1);
             if (newPositionVector.y < InitialHookPosition.y)
             {
                 LineRenderer.SetPosition(1, newPositionVector);
@@ -67,10 +68,16 @@ public class RodController : MonoBehaviour
             {
                 RodCastingOff = false;
                 RodReelingIn = false;
-                PlayerController.ResetSpeed();
+                PlayerController.HookActive = false;
                 LineRenderer.SetPosition(0, new Vector3());
                 LineRenderer.SetPosition(1, new Vector3());
             }
         }
+    }
+
+    public void ReelRodIn()
+    {
+        RodCastingOff = false;
+        RodReelingIn = true;
     }
 }

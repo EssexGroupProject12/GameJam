@@ -31,6 +31,7 @@ TagManager:
   - Toothbrush
   - Hook
   - Bottle
+  - Rod
   layers:
   - Default
   - TransparentFX
@@ -67,4 +68,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 2843497807
     locked: 0

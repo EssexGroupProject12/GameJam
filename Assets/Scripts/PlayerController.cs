@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     private Color OriginalColor;
     private float SpeedDownRemaining;
 
+    public bool HookActive { get; set; }
+
     private void Start()
     {
         OriginalSpeed = Speed;
@@ -37,17 +39,24 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        var horizontalInput = Input.GetAxis("Horizontal");
-        var verticalInput = Input.GetAxis("Vertical");
-        var speedVector = new Vector3(horizontalInput * Speed, AllowVerticalMovement ? verticalInput * Speed : 0, 0);
-        Rigidbody.velocity = speedVector;
-
-        transform.position = new Vector3(Mathf.Clamp(Rigidbody.position.x, XMin, XMax), Mathf.Clamp(Rigidbody.position.y, YMin, YMax), 0);
-
-        if (SpeedDownRemaining > 0)
+        if (!HookActive)
         {
-            SpeedDownRemaining -= Time.deltaTime;
-            if (SpeedDownRemaining <= 0) ResetSpeed();
+            var horizontalInput = Input.GetAxis("Horizontal");
+            var verticalInput = Input.GetAxis("Vertical");
+            var speedVector = new Vector3(horizontalInput * Speed, AllowVerticalMovement ? verticalInput * Speed : 0, 0);
+            Rigidbody.velocity = speedVector;
+
+            transform.position = new Vector3(Mathf.Clamp(Rigidbody.position.x, XMin, XMax), Mathf.Clamp(Rigidbody.position.y, YMin, YMax), 0);
+
+            if (SpeedDownRemaining > 0)
+            {
+                SpeedDownRemaining -= Time.deltaTime;
+                if (SpeedDownRemaining <= 0) ResetSpeed();
+            }
+        }
+        else
+        {
+            Rigidbody.velocity = new Vector3();
         }
     }
 
@@ -56,7 +65,6 @@ public class PlayerController : MonoBehaviour
         Speed = OriginalSpeed - 2.5f;
         SpeedDownRemaining = 3f;
         SpriteRenderer.color = Color.black;
-        //Invoke("ResetSpeed", 3f);
     }
 
     public void ResetSpeed()   
