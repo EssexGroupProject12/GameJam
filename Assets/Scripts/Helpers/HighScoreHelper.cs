@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Assets.Scripts.Helpers
 {
@@ -126,7 +127,7 @@ namespace Assets.Scripts.Helpers
 
         public static string GetHighScorePath(bool daily, int level)
         {
-            string dir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            string dir = Path.GetDirectoryName(Application.persistentDataPath);
             var path = "";
             if (daily)
             {
