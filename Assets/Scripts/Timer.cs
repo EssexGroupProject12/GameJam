@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
         while (countdown > 0)
         {
             countdown--;
-            Debug.Log(countdown);
+            //Debug.Log(countdown);
             yield return new WaitForSeconds(1);
         }
 
