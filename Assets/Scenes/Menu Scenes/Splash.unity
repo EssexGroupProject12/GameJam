@@ -187,22 +187,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224291953298451800, guid: 0faddaa5e42720d459536503295dcd30,
     type: 2}
   m_PrefabInternal: {fileID: 1827513200}
---- !u!1 &578631153 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1564771541808856, guid: 2bdeffccbc4f26e4ab5787f2b88e76dc,
-    type: 2}
-  m_PrefabInternal: {fileID: 697022775}
---- !u!114 &578631154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 578631153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31ab632dd363f8d49b3b1a9e88d2232c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &697022775
 Prefab:
   m_ObjectHideFlags: 0
@@ -297,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 2058547566}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &810633282
@@ -879,7 +863,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2058547566}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -913,14 +897,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 697022776}
-        m_MethodName: ReturnToStart
-        m_Mode: 1
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Start
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2058547571}
@@ -1042,7 +1026,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
