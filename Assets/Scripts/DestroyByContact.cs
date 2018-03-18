@@ -11,7 +11,6 @@ public class DestroyByContact : MonoBehaviour
     {
         GameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         sonar = GameObject.FindGameObjectWithTag("Sonar");
-        var rod = GameObject.FindGameObjectWithTag("Rod");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

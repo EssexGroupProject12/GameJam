@@ -2,47 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSettings : MonoBehaviour
+public class PlayerSettings
 {
     public static int LastScore = 0;
+    public static int LastLevel = 0;
     private static string MusicKey = "IsMusicOn";
     private static string SoundKey = "IsSoundOn";
     private static string DifficultyKey = "IsHardDifficulty";
-    private static string Level1TimeKey = "Level1Time";
-    private static string Level2TimeKey = "Level2Time";
     private static string SoundLevelKey = "SoundLevel";
-
-    public static float Level1Time
-    {
-        get
-        {
-            if (!PlayerPrefs.HasKey(Level1TimeKey))
-            {
-                PlayerPrefs.SetFloat(Level1TimeKey, 1000);
-            }
-            return PlayerPrefs.GetFloat(Level1TimeKey);
-        }
-        set
-        {
-            PlayerPrefs.SetFloat(Level1TimeKey, value);
-        }
-    }
-
-    public static float Level2Time
-    {
-        get
-        {
-            if (!PlayerPrefs.HasKey(Level2TimeKey))
-            {
-                PlayerPrefs.SetFloat(Level2TimeKey, 1000);
-            }
-            return PlayerPrefs.GetFloat(Level2TimeKey);
-        }
-        set
-        {
-            PlayerPrefs.SetFloat(Level2TimeKey, value);
-        }
-    }
 
     public static bool IsHardDifficulty
     {

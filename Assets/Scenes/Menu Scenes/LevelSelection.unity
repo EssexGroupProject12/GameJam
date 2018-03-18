@@ -1126,7 +1126,7 @@ GameObject:
   - component: {fileID: 958333979}
   - component: {fileID: 958333978}
   m_Layer: 5
-  m_Name: Level1Time
+  m_Name: Level1Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BEST TIME: N/A'
+  m_Text: 'BEST SCORE: N/A'
 --- !u!222 &958333979
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1614,8 +1614,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ebc1c1a70f00e408fd921234d2d90d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level1Time: {fileID: 958333978}
-  Level2Time: {fileID: 2098220225}
+  Level1Score: {fileID: 958333978}
+  Level2Score: {fileID: 2098220225}
 --- !u!4 &1828119797
 Transform:
   m_ObjectHideFlags: 0
@@ -1729,7 +1729,7 @@ GameObject:
   - component: {fileID: 2098220226}
   - component: {fileID: 2098220225}
   m_Layer: 5
-  m_Name: Level2Time
+  m_Name: Level2Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1785,7 +1785,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BEST TIME: N/A'
+  m_Text: 'BEST SCORE: N/A'
 --- !u!222 &2098220226
 CanvasRenderer:
   m_ObjectHideFlags: 0

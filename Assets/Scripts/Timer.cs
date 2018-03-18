@@ -32,6 +32,7 @@ public class Timer : MonoBehaviour
         }
 
         PlayerSettings.LastScore = gameController.Score;
+        PlayerSettings.LastLevel = gameController.sub ? 1 : 2;
         SceneManager.LoadScene("Education");
     }
 }

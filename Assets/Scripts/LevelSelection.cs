@@ -4,38 +4,22 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
-
+using Assets.Scripts.Helpers;
 
 public class LevelSelection : MonoBehaviour
-    // TODO show the highscores for each lvl in the text fields
 {
-    public Text Level1Time;
-    public Text Level2Time;
+    public Text Level1Score;
+    public Text Level2Score;
 
     private void Start()
     {
-        Level1Time.text = "BEST TIME: " + (PlayerSettings.Level1Time == 1000 ? "N/A" : PlayerSettings.Level1Time.ToString("0.000"));
-        Level2Time.text = "BEST TIME: " + (PlayerSettings.Level2Time == 1000 ? "N/A" : PlayerSettings.Level2Time.ToString("0.000"));
-    }
+        var highScoreLevel1Path = HighScoreHelper.GetHighScorePath(false, 1);
+        var highScoreLevel2Path = HighScoreHelper.GetHighScorePath(false, 2);
 
-    private int ReadHighScores(string path)
-    {
-        string highScoresLine;
+        var highScoreLevel1 = HighScoreHelper.ReadHighScores(highScoreLevel1Path)[0].Score;
+        var highScoreLevel2 = HighScoreHelper.ReadHighScores(highScoreLevel2Path)[0].Score;
 
-        if (File.Exists(path))
-        {
-            StreamReader reader = new StreamReader(path);
-            while (reader.Peek() >= 0)
-            {
-                highScoresLine = reader.ReadLine();
-                string[] lineTemp = highScoresLine.Split(',');
-                
-                int tempScore = Convert.ToInt32(lineTemp[2]);
-                return tempScore;
-            }
-            reader.Close();
-        }
-        else {return 0;}
-        return 0;
+        Level1Score.text = "BEST SCORE: " + highScoreLevel1;
+        Level2Score.text = "BEST SCORE: " + highScoreLevel2;
     }
 }
