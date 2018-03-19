@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 //using NUnit.Framework.Constraints;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     public int Score;
     public Text ScoreText;
+    public Image GameOverImage;
 
     public GameObject[] Collectables;
     public GameObject EncapsulatedObject;
@@ -86,7 +88,24 @@ public class GameController : MonoBehaviour
             return 4;
         }
         return 1; //default coin (but should never get here)
+    }
 
+    public void EndGame()
+    {
+        GameOverImage.gameObject.SetActive(true);
+        PlayerController.Speed = 0;
+        PlayerController.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        var hook = GameObject.FindGameObjectWithTag("Hook");
+        if (hook != null)
+        {
+            hook.GetComponent<PolygonCollider2D>().enabled = false;
+        }
+        StopAllCoroutines();
+        Invoke("ShowEducationScreen", 2);
+    }
 
+    private void ShowEducationScreen()
+    {
+        SceneManager.LoadScene("Education");
     }
 }
