@@ -20,7 +20,7 @@ public class MusicPlayer : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             AudioSource = GetComponent<AudioSource>();
             ToggleMuteMusic(!PlayerSettings.IsMusicOn);
-            ToggleMuteSound(!PlayerSettings.IsSoundOn);
+            SetVolume(PlayerSettings.SoundLevel);
         }
     }
 

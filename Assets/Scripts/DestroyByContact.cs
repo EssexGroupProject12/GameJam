@@ -15,7 +15,7 @@ public class DestroyByContact : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Hook")
+        if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Hook") && gameObject.tag != "EncapsulatedObject")
         { 
             switch (gameObject.tag)
             {
