@@ -47,6 +47,7 @@ namespace Assets.Scripts.Helpers
 
         public static string WriteHighScore(NameScore[] unsortedScores, int newScore, string path)
         {
+            var highScoreMarked = false;
             var newScoresToAdd = SortNewScores(unsortedScores, newScore);
             var writer = new StreamWriter(path, false);
             var newHighscores = "";
@@ -55,8 +56,16 @@ namespace Assets.Scripts.Helpers
             {
                 //Debug.Log(string.Format("{0},{1},{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score));
                 string toWrite = string.Format("{0},{1},{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score);
-                newHighscores += "\n\n" + string.Format("{0},\t{1},\t{2}", addNewScore.Rank, addNewScore.Name, addNewScore.Score);
-
+                if(!highScoreMarked && addNewScore.Score == newScore)
+                {
+                    newHighscores += "\n\n" + string.Format("<color=#FBFF00FF>{0},\t{1}</color>", addNewScore.Rank, addNewScore.Score);
+                    highScoreMarked = true;
+                }
+                else
+                {
+                    newHighscores += "\n\n" + string.Format("{0},\t{1}", addNewScore.Rank, addNewScore.Score);
+                }
+                
                 writer.WriteLine(toWrite);
             }
             writer.Close();
